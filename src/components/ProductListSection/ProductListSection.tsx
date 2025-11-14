@@ -5,7 +5,7 @@ import { getCartClient, getProductClient } from "../../api/grpc/client";
 import { formatToIDR } from "../../utils/number";
 import Swal from "sweetalert2";
 import { useAuthStore } from "../../store/auth";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 interface Product {
     id: string;

@@ -65,8 +65,8 @@ function useGrpcApi() {
 
       if (args?.useDefaultError ?? true){
           Swal.fire({
-            title: "Terjadi Kesalahan",
-            text: "Silahkan coba beberapa saat lagi",
+            title: "Backend E-Commerce ini disable",
+            text: "Silahkan hubungi nomor ini +6282118251763 untuk merasakan pengalaman website",
             icon: "error",
           })
       }

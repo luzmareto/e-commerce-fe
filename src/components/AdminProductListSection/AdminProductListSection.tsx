@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import useSortableHeader from '../../hooks/useSortableHeader';
 import SortableHeader from '../SortableHeader/SortableHeader';
 import Pagination from '../Pagination/Pagination';

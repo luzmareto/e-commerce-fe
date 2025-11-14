@@ -219,8 +219,7 @@ class Timestamp$Type extends MessageType<Timestamp> {
      * In JSON format, the `Timestamp` type is encoded as a string
      * in the RFC 3339 format.
      */
-    internalJsonRead(json: JsonValue, options: JsonReadOptions, target?: Timestamp): Timestamp {
-        if (typeof json !== "string")
+internalJsonRead(json: JsonValue, _options: JsonReadOptions, target?: Timestamp): Timestamp {        if (typeof json !== "string")
             throw new Error("Unable to parse Timestamp from JSON " + typeofJsonValue(json) + ".");
         let matches = json.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/);
         if (!matches)
