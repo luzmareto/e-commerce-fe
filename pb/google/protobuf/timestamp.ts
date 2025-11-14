@@ -43,7 +43,6 @@ import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { typeofJsonValue } from "@protobuf-ts/runtime";
 import type { JsonValue } from "@protobuf-ts/runtime";
 import type { JsonReadOptions } from "@protobuf-ts/runtime";
-import type { JsonWriteOptions } from "@protobuf-ts/runtime";
 import { PbLong } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
 /**
@@ -197,7 +196,7 @@ class Timestamp$Type extends MessageType<Timestamp> {
      * In JSON format, the `Timestamp` type is encoded as a string
      * in the RFC 3339 format.
      */
-    internalJsonWrite(message: Timestamp, options: JsonWriteOptions): JsonValue {
+    internalJsonWrite(message: Timestamp): JsonValue {
         let ms = PbLong.from(message.seconds).toNumber() * 1000;
         if (ms < Date.parse("0001-01-01T00:00:00Z") || ms > Date.parse("9999-12-31T23:59:59Z"))
             throw new Error("Unable to encode Timestamp to JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.");
